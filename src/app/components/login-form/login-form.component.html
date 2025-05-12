@@ -1,0 +1,11 @@
+<form [formGroup]="loginForm" class="form-login" (ngSubmit)="acesso()">
+  <div class="mb-3">
+    <label for="usuario-login" class="form-label">Usuário</label>
+    <input formControlName="nome" type="text" class="form-control" id="usuario-login" required>
+  </div>
+  <div class="mb-3">
+    <label for="senha-login" class="form-label">Senha</label>
+    <input formControlName="senha" type="password" class="form-control" id="senha-login" required>
+  </div>
+  <button type="submit" class="btn-login">Acessar</button>
+</form>
