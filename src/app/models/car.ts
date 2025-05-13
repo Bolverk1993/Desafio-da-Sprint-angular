@@ -8,3 +8,11 @@ export type Veiculo = {
     img: string
 }
 
+export type VinInfos = {
+    id: number
+    odometro: number
+    nivelCombustivel: number
+    status: string
+    lat: number
+    long: number
+}

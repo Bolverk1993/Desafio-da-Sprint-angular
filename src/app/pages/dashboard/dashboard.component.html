@@ -18,5 +18,11 @@
         <img src="{{ veiculoSelecionado.img }}" alt="">
     </section>
     <section>
-      <app-car-table />
+      <app-car-table [vin]="veiculoSelecionado.vin" 
+      [lat]="vinInfos.lat"
+      [long]="vinInfos.long"
+      [nivelCombustivel]="vinInfos.nivelCombustivel"
+      [odometro]="vinInfos.odometro"
+      [status]="vinInfos.status"
+      />
     </section>

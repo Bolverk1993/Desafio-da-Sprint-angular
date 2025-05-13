@@ -1,22 +1,22 @@
 <table class="tabela-vin">
     <thead>
         <tr>
-            <th>VIN</th>
-            <th>ODOMETRO</th>
-            <th>NÍVEL DO COMBUSTIVEL</th>
-            <th>STATUS</th>
-            <th>LAT</th>
-            <th>LONG</th>
+            <th  class="p-3">VIN</th>
+            <th  class="p-3">ODOMETRO</th>
+            <th  class="p-3">NÍVEL DO COMBUSTIVEL</th>
+            <th  class="p-3">STATUS</th>
+            <th  class="p-3">LAT</th>
+            <th  class="p-3">LONG</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td><input type="text"></td>
-            <td>80000km</td>
-            <td>90%</td>
-            <td>ON</td>
-            <td>32.2831</td>
-            <td>14.1625</td> 
+            <td class="d-flex"><input (change)="onEditVin($event)" type="text" placeholder="{{ vin }}" value="{{ vin }}" class="w-100 align-self-center"></td>
+            <td  class="p-3">{{odometro}}km</td>
+            <td  class="p-3">{{nivelCombustivel}}%</td>
+            <td  class="p-3">{{status}}</td>
+            <td  class="p-3">{{lat}}</td>
+            <td  class="p-3">{{long}}</td> 
         </tr>
     </tbody>
 </table>
