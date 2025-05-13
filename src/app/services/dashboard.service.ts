@@ -1,13 +1,17 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Veiculo } from '../models/car';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DashboardService {
 http = inject(HttpClient)
-  getVeiculos(){
-this.http.get("http://localhost:3001/vehicles")
+
+  getVeiculos(): Observable<Veiculo[]>{
+return this.http.get<Veiculo[]>("http://localhost:3001/vehicles")
+
   }
 
   getVinInfos() {

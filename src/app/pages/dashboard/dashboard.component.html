@@ -1,42 +1,22 @@
     <section class="d-flex gap-3">
         <div class="shadow border border-black p-3">
             <h2>Veículos</h2>
-            <select>
-                <option value="">Territory</option>
-                <option value="">Mustang</option>
-                <option value="">Bronco</option>
-                <option value="">Ranger</option>
+            <select (change)="onChangeSelect($event)">
+              @for(v of veiculos; track v.id){
+                <option value="{{ v.id }}">{{ v.vehicle }}</option>
+
+              }
             </select>
             </div>
         
-            <app-card />
-            <app-card />
-            <app-card />
+            <app-card [titulo]="'Total de Vendas'" [valor]=" veiculoSelecionado.volumetotal"/>
+            <app-card [titulo]="'Conectados'" [valor]=" veiculoSelecionado.connected"/>
+            <app-card [titulo]="'UpdateSoftware'" [valor]=" veiculoSelecionado.softwareUpdates"/>
+          
     </section>
     <section>
-        <img src="http://localhost:3001/Mustang.png" alt="">
+        <img src="{{ veiculoSelecionado.img }}" alt="">
     </section>
     <section>
-        <table class="tabela-vin">
-            <thead>
-                <tr>
-                    <th>VIN</th>
-                    <th>ODOMETRO</th>
-                    <th>NÍVEL DO COMBUSTIVEL</th>
-                    <th>STATUS</th>
-                    <th>LAT</th>
-                    <th>LONG</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><input type="text"></td>
-                    <td>80000km</td>
-                    <td>90%</td>
-                    <td>ON</td>
-                    <td>32.2831</td>
-                    <td>14.1625</td> 
-                </tr>
-            </tbody>
-        </table>
+      <app-car-table />
     </section>
