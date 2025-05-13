@@ -1,0 +1,14 @@
+
+*{
+    padding: 0;
+    gap: 0;
+    
+}
+.cabecalho{
+    border: 3px solid ;
+    padding-bottom: 25px;
+    height: auto;
+}
+.cabecalho img{
+    transform: scale(.15);
+}
