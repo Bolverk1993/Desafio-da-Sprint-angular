@@ -8,8 +8,18 @@ import { Router } from '@angular/router';
   styleUrl: './menu.component.css'
 })
 export class MenuComponent {
-router = inject(Router)
-  goToDashboard(){
-this.router.navigate(["/dashboard"])
-}
+  router = inject(Router)
+
+  goToDashboard() {
+    this.router.navigate(["/dashboard"])
+  }
+
+  goToHome() {
+    this.router.navigate(["/home"])
+  }
+
+  logout() {
+    sessionStorage.clear()
+    this.router.navigate([""])
+  }
 }

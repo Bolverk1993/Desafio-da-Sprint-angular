@@ -12,8 +12,4 @@ import { Router } from '@angular/router';
 export class HomeComponent {
   router = inject(Router)
 
-  logout() {
-    sessionStorage.clear()
-    this.router.navigate([""])
-  }
 }
