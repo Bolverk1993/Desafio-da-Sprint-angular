@@ -1,3 +1,5 @@
+rodar a api de dentro da pasta "api-angular-ford-main" //Usuário: admin || Senha: 123//
+
 # AngularClass
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.11.
